@@ -11,7 +11,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 # Find the paragraphs containing the Lorem Ipsum text
 paragraphs = soup.find_all('p')
 
-print('Printing all paragraphs')
+print('\nPrinting all paragraphs')
 
 # Extract and print the text content of the paragraphs
 for paragraph in paragraphs:
@@ -28,3 +28,11 @@ print('Printing all div tags')
 for div in div_tags:
     print(div)
     print('-' * 50)  # Add a separator for readability
+
+# Pring all links
+
+print('\nPrinting all links')
+
+links = soup.find_all("a")
+for link in links:
+    print(link.get("href"))
