@@ -36,3 +36,5 @@ print('\nPrinting all links')
 links = soup.find_all("a")
 for link in links:
     print(link.get("href"))
+
+print('\nPrinting whole page content\n', soup)
